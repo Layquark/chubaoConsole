@@ -1,6 +1,6 @@
 # Nginx Operator
 
-A sample Nginx Operator project for PoC purpose.
+A sample Nginx Operator project for  chubaofs.
 
 
 ## Create the Operator
@@ -13,70 +13,10 @@ operator-sdk add controller --api-version operator.example.com/v1alpha1 --kind N
 operator-sdk generate k8s
 operator-sdk generate crds
 
-operator-sdk build quay.io/siji/nginx-operator:v0.0.1
+operator-sdk build quay.io/siji/chubaoConsole:v0.0.1
 ```
 
-
-## Integration with OLM
-
-### Generate CSV
-
-```
-operator-sdk generate csv --csv-version 0.0.1 --update-crds
-```
-
-### Update the generated CSV required fields:
-
-deploy/olm-catalog/nginx-operator/0.0.1/nginx-operator.v0.0.1.clusterserviceversion.yaml
-
-* keywords
-* maintainers
-* provider
-
-```
-spec:
-  keywords:
-  - nginx
-  maintainers:
-  - email: zhiweik@gmail.com
-    name: zhiwei
-  provider:
-    name: zhiwei
-```
-
-### Update the generated CSV owned CRD fields:
-
-deploy/olm-catalog/nginx-operator/0.0.1/nginx-operator.v0.0.1.clusterserviceversion.yaml
-
-* description
-* displayName
-
-```
-spec:
-  customresourcedefinitions:
-    owned:
-    - kind: Nginx
-      name: nginxes.operator.example.com
-      version: v1alpha1
-      description: The Nginx CRD
-      displayName: Nginx
-```
-
-### [Optional] Update the generated CSV required CRD fields:
-
-```
-spec:
-  customresourcedefinitions:
-    required:
-    - kind: Database
-      name: databases.operator.example.com
-      version: v1alpha1
-      description: The Database CRD
-      displayName: Database
-```
-
-
-## Makefile
+* Makefile
 
 ```
 make build

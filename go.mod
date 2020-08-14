@@ -1,8 +1,9 @@
-module github.com/chenzhiwei/nginx-operator
+module github.com/Layquark/chubaoConsole
 
 go 1.13
 
 require (
+	github.com/chenzhiwei/nginx-operator v0.0.0-20200713082907-f05da7534c30
 	github.com/go-openapi/spec v0.19.0
 	github.com/operator-framework/operator-sdk v0.12.0
 	github.com/spf13/pflag v1.0.3
