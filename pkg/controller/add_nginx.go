@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/chenzhiwei/nginx-operator/pkg/controller/nginx"
+	"github.com/Layquark/chubaoConsole/pkg/controller/nginx"
 )
 
 func init() {

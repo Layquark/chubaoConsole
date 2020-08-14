@@ -1,7 +1,7 @@
 package apis
 
 import (
-	"github.com/chenzhiwei/nginx-operator/pkg/apis/app/v1alpha1"
+	"github.com/Layquark/chubaoConsole/pkg/apis/app/v1alpha1"
 )
 
 func init() {
