@@ -50,6 +50,7 @@ A sample Nginx Operator project for  chubaofs.
    * Makefile
 
    ```
+   sudo su
    make build
    make image
    make push-image
